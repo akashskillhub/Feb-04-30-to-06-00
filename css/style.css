@@ -1,0 +1,8 @@
+p {
+    background-color: red;
+}
+
+h1 {
+    background-color: blue !important;
+    border: 10px dashed coral;
+}

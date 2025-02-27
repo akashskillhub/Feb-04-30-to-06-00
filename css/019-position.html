@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dummy {
+            background-color: yellow;
+            height: 300px;
+        }
+
+        .parent {
+            background-color: red;
+            height: 200px;
+            width: 200px;
+        }
+
+        .child {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            position: fixed;
+            top: 50px;
+            right: 50px;
+        }
+
+        .box {
+            background-color: aqua;
+            height: 2000px;
+
+        }
+
+        .demo {
+            background-color: brown;
+            height: 100px;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        1 static
+
+        top right bottom left
+
+        abosulte
+        relative
+        fixed
+        sticky
+    -->
+
+    <div class="dummy"></div>
+
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <div class="demo"></div>
+
+    <div class="box"></div>
+
+</body>
+
+</html>

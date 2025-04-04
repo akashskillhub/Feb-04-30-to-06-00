@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header">Todo App</div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" id="task" class="form-control">
+                            <button class="btn btn-dark" onclick="addtodo()">add</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const task = document.getElementById("task")
+        const notes = ["learn html", "learn css", "learn js"]
+        function addtodo() {
+            notes.unshift(task.value)
+            display()
+        }
+
+        function display() {
+            let str = "", i = 0
+            for (const item of notes) {
+                // str = str + item // str = "learn html"+ "learn css"
+                //          👇template string 
+                str = str + `<div class="alert alert-success"> ${item} <button onclick="remove(${i})" class="btn btn-danger">delete</button> </div>`
+                i++
+            }
+            document.getElementById("root").innerHTML = str
+        }
+        function remove(index) {
+            notes.splice(index, 1)
+            display()
+        }
+
+        display()
+    </script>
+</body>
+
+</html>

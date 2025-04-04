@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+            true  && false   => false
+            false && false   => false
+            false && true    => false
+            true  && true    => true
+        */
+        console.log(10 == "10" && 10 !== "10")
+        // true && 
+        // 10 === "10" false true
+        console.clear()
+
+        /*
+            true  || false   => true
+            false || false   => false
+            false || true    => true
+            true  || true    => true
+         */
+        console.log(10 == 10 || 10 < 10)
+        // false || true
+
+        console.clear()
+
+        let x = 10, y = "10"
+
+        console.log(x != y || x == y)
+        console.log(x != y && x == y)
+
+
+    </script>
+</body>
+
+</html>

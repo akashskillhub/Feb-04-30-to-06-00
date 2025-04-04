@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const x = 10
+        let y = x
+        y = 20
+        console.log(y)
+        console.log(x)
+        // primitive : string , number boolean, null, undefined
+
+
+        // non primitive : array object function 
+        const arr = ["dell", "hp"]
+        const arr1 = arr // ❌ not copy
+        arr1.push("apple")
+        console.log(arr1)
+        console.log(arr)
+
+        const obj = { name: "ross", age: 20 }
+        const obj1 = obj
+        obj1.name = "john"
+        console.log(obj1)
+        console.log(obj)
+
+        function demo() {
+            console.log("demo fn")
+            return "dell"
+        }
+
+        const test = demo
+        test()
+        demo()
+
+
+    </script>
+</body>
+
+</html>

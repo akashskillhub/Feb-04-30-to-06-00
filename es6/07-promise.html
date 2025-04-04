@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+            Pending – Initial state, the operation is not completed.
+            Fulfilled(resolve) – The operation was successful, and the promise returns a result.
+            Rejected(reject) – The operation failed, and the promise returns an error.
+        */
+        const handleSuccess = (arg) => console.log("success", arg)
+        const handleFail = () => console.log("fail")
+
+        const x = new Promise((resolve, reject) => {
+            resolve("all done")
+            // reject()
+        })
+
+        x.then(handleSuccess).catch(handleFail)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getData()">then catch</button>
+    <button onclick="getTodos()">async</button>
+
+    <script>
+        const URL = "https://jsonplaceholder.typicode.com/todos"
+
+        const getData = () => {
+            fetch(URL)
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .catch(err => console.log(err))
+        }
+
+        const getTodos = async () => {
+            try {
+                const res = await fetch(URL)
+                const data = await res.json()
+                console.warn(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    </script>
+</body>
+
+</html>

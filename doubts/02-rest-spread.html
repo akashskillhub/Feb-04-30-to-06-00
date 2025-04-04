@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //           👇 rest oprator
+        const sum = (...n1) => {
+            console.log(n1)
+        }
+        sum(1, 2, 3)
+        sum(1, 2, 3, 4, 5)
+
+        // spread
+
+        const arr = [10, 20, 30]
+        // const x = arr // non premitive
+        const x = [...arr] // spread  shalow copy
+        x.push(40)
+        console.log(x)
+        console.log(arr)
+
+        const obj = { name: "ross", age: 20 }
+        // const y = obj
+        const y = { ...obj } // shalow copy
+        y.name = "ethan"
+        console.log(y)
+        console.log(obj)
+
+
+    </script>
+</body>
+
+</html>

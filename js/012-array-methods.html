@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const brands = ["dell", "hp", "apple"]
+        // brands[3] = "lenovo"
+        brands.push("lenovo")
+        brands.unshift("asus")
+        brands.pop()
+        brands.shift()
+        console.log(brands)
+        console.clear()
+
+        const mobiles = ["samsung", "apple", "mi", "vivo", "moto"]
+        // mobiles.splice(1, 2) // 1 => start index , 2 => delete count
+        mobiles.splice(1, 2)
+        console.log(mobiles)
+
+    </script>
+</body>
+
+</html>

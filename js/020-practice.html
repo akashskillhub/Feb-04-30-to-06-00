@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // demo => HOF higher Order Function
+        // test => callback function
+
+        function demo(arg) {
+            return arg()
+        }
+        function test() {
+            console.log("test function")
+            return 500
+        }
+
+        const x = demo(test)
+        console.log(x)
+
+    </script>
+</body>
+
+</html>

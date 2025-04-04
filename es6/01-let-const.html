@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*
+
+                        redeclare   re-initialize    TDZ        scope
+            var            yes          yes          no       functional
+            let            no           yes          yes      block     
+            const          no           no           yes      block
+
+        */
+
+        // let x   // decleration
+        // x = 10  // initialization
+        // let x // re-declare
+
+        var y = 10 // decleration + initialization
+        var y = 20
+
+        // re initialization
+        var z = 10
+        z = 20
+
+        let p = 10
+        p = 20
+
+        const q = 10
+        // q = 20 // ERROR
+
+
+        // TDZ (Temporal Dead Zone)
+        // The TDZ helps prevent errors by ensuring that variables are not accessed before they are initialized.
+
+        console.log(a)
+        var a = 500
+
+        console.clear()
+
+
+        if (true) {
+            var b1 = "dell"
+            let b2 = "dell"
+            const b3 = "dell"
+            console.log("inside if")
+        }
+        console.log(b1) // functional
+        // console.log(b2) // ERROR
+        // console.log(b3) // ERROR
+
+
+
+    </script>
+</body>
+
+</html>

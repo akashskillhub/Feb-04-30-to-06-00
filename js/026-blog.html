@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header">Blog App</div>
+                    <div class="card-body">
+                        <input placeholder="enter title" class="form-control my-2" type="text" id="title">
+                        <input placeholder="enter hero image url" class="form-control my-2" type="text" id="hero">
+                        <textarea placeholder="enter description" class="form-control my-2" id="desc"></textarea>
+                        <button class="btn btn-dark w-100" onclick="addBlog()">add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" id="root">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const title = document.getElementById("title")
+        const hero = document.getElementById("hero")
+        const desc = document.getElementById("desc")
+        const root = document.getElementById("root")
+        const articles = []
+        function addBlog() {
+            const obj = {
+                title: title.value,
+                desc: desc.value,
+                hero: hero.value,
+            }
+            articles.push(obj)
+            dispaly()
+
+            title.value = ""
+            desc.value = ""
+            hero.value = ""
+
+        }
+
+        function dispaly() {
+            let str = "", i = 0
+            for (const item of articles) {
+                str = str + `<div class="col-sm-4">
+                <div class="card">
+                        <img src="${item.hero}" class="img-fluid" />
+                        <div class="card-body">
+                            <h1>${item.title}</h1>    
+                            <p>${item.desc}</p>    
+                        </div>
+                        <div class="card-footer">
+                            <button onclick="remove(${i})" class="btn btn-outline-danger">Remove</button>
+                        </div>
+                    </div>
+                </div>`
+                i++
+            }
+            root.innerHTML = str
+        }
+
+        function remove(index) {
+            articles.splice(index, 1)
+            dispaly()
+        }
+    </script>
+
+</body>
+
+</html>

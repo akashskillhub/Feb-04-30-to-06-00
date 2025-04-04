@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // const stud1 = { name: "ross", age: 20 }
+        // const stud2 = { name: "kate", age: 24 }
+        // const arr = [stud1, stud2]
+
+        const arr = [
+            { name: "ross", age: 20, mobile: [123, 789] },
+            { name: "kate", age: 24, mobile: [456] }
+        ]
+        console.log(arr[1].mobile[0])
+
+
+        const data = {
+            "weather": [
+                {
+                    "id": 501,
+                    "main": "Rain",
+                    "description": "moderate rain",
+                    "icon": "10d"
+                }
+            ],
+            "base": "stations",
+            "main": {
+                "temp": 284.2,
+                "feels_like": 282.93,
+                "temp_min": 283.06,
+                "temp_max": 286.82,
+                "pressure": 1021,
+                "humidity": 60,
+                "sea_level": 1021,
+                "grnd_level": 910
+            },
+            "visibility": 10000,
+            "wind": {
+                "speed": 4.09,
+                "deg": 121,
+                "gust": 3.47
+            },
+            "rain": {
+                "1h": 2.73
+            },
+            "clouds": {
+                "all": 83
+            },
+            "dt": 1726660758,
+            "sys": {
+                "type": 1,
+                "id": 6736,
+                "country": "IT",
+                "sunrise": 1726636384,
+                "sunset": 1726680975
+            },
+
+        }
+
+        console.log(data.weather[0].icon);
+
+
+    </script>
+
+</body>
+
+</html>
